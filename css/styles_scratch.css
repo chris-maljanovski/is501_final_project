@@ -33,7 +33,7 @@ body {
 .hero {
     text-align: center;
     padding: 3em 1em;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/01/NASA_Hubble_Space_Telescope_View_of_a_Cosmic_Explosion.jpg');
+    position: relative;
     background-size: cover;
     background-position: center;
 }
