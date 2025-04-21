@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Space Page</title>
+    <link rel="stylesheet" href="css/styles_scratch.css">
+</head>
+
+<body>
+
+    <!-- Navigation-->
+    <div class="nav">
+        <a href="index.html">Professional Page</a> |
+        <a href="#">Space Page</a> |
+        <a href="riddle.html">Riddle Generator</a> |
+        <a href="extra.html">Graduate Extra Page</a>
+    </div>
+    <div class="jump">
+        <a href="#tableau">Jump to Tableau</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Exploring the Universe</h1>
+        <p>Welcome to my page about Astronomy—a passion that spans galaxies!</p>
+    </div>
+
+    <!-- Embedded YouTube Video -->
+    <div class="video">
+        <h2>Watch: Everything Discovered By The James Webb Space Telescope (since launch) </h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Ul2tR7qxqM?si=PMMYy453-J0KXQvD"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <!-- Ordered List with Embedded Unordered List -->
+    <div class="lists">
+        <h2>Top 3 Fascinations in Space</h2>
+        <ol>
+            <li>Black Holes
+                <ul>
+                    <li>Singularity</li>
+                    <li>Event Horizon</li>
+                    <li>Spaghettification</li>
+                </ul>
+            </li>
+            <li>Galaxies</li>
+            <li>Planets
+                <ul>
+                    <li>Mars</li>
+                    <li>Jupiter</li>
+                    <li>Saturn</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Images -->
+    <div class="images">
+        <h2>Favorite Space Photos</h2>
+        <img src="assets/img/spacePic1.jpg" alt="Supernova Remnant N49">
+        <img src="assets/img/spacePic2.png" alt="Keyhole Nebula">
+    </div>
+
+    <!-- Tableau Graph -->
+    <div class="tableau" id="viz1745250766928" style="position: relative">
+        <h2><a id="tableau">Tableau Visualization</a></h2>
+        <noscript>
+            <a href="#">
+                <img alt="SpaceRace"
+                    src="https://public.tableau.com/static/images/Sp/SpaceRace_16029283688270/SpaceRace/1_rss.png"
+                    style="border: none" />
+            </a>
+        </noscript>
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="SpaceRace_16029283688270/SpaceRace" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param name="static_image"
+                value="https://public.tableau.com/static/images/Sp/SpaceRace_16029283688270/SpaceRace/1.png" />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+        </object>
+    </div>
+
+    <script type="text/javascript">
+        var divElement = document.getElementById('viz1745250766928');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '1400px';
+            vizElement.style.height = '2027px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '1400px';
+            vizElement.style.height = '2027px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '3777px';
+        }
+
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+</body>
+
+</html>

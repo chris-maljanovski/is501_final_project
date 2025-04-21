@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Riddle Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1a2f;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fcd34d;
+        }
+
+        .nav {
+            background-color: #122a47;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #80dfff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        #riddleBox {
+            background-color: #374151;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+
+        #riddle {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        #answer {
+            display: none;
+            font-weight: bold;
+            color: #4ade80;
+        }
+
+        button {
+            background-color: #3b82f6;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <div class="nav">
+        <a href="index.html">Professional Page</a> |
+        <a href="scratch.html">Space Page</a> |
+        <a href="#">Riddle Generator</a> |
+        <a href="extra.html">Graduate Extra Page</a>
+    </div>
+
+    <h1>🤔 Riddle Me This</h1>
+    <div id="riddleBox">
+        <div id="riddle">Click below to get a riddle!</div>
+        <div id="answer"></div>
+    </div>
+    <button onclick="showRiddle()">New Riddle</button>
+    <button onclick="revealAnswer()">Reveal Answer</button>
+
+    <script>
+        const riddles = [
+            {
+                question: "What has to be broken before you can use it?",
+                answer: "An egg."
+            },
+            {
+                question: "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+                answer: "A candle."
+            },
+            {
+                question: "What month of the year has 28 days?",
+                answer: "All of them."
+            },
+            {
+                question: "What is full of holes but still holds water?",
+                answer: "A sponge."
+            },
+            {
+                question: "What can’t talk but will reply when spoken to?",
+                answer: "An echo."
+            }
+        ];
+
+        let currentRiddle = null;
+
+        function showRiddle() {
+            const index = Math.floor(Math.random() * riddles.length);
+            currentRiddle = riddles[index];
+            document.getElementById('riddle').innerText = currentRiddle.question;
+            document.getElementById('answer').style.display = 'none';
+        }
+
+        function revealAnswer() {
+            if (currentRiddle) {
+                document.getElementById('answer').innerText = currentRiddle.answer;
+                document.getElementById('answer').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
